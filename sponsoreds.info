@@ -2,5 +2,5 @@ name = Sponsoreds Module
 description = Module created for list, and easy managin sponsoreds images and links on a block
 package = Custom Private Modules
 version = 7.x-1.0
-core = 7.x
+core = 7.x 
 

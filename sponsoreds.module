@@ -25,13 +25,14 @@ function sponsoreds_permission(){
 
 function sponsoreds_menu(){
 	$items = array();
-	$items['config/administration/sponsoreds'] = array(
+	$items['admin/config/administration/sponsoreds'] = array(
 		'title' => t('Sponsored Managing'),
+		'file' => 'sponsored.admin.page.inc',
 		'description' => t('Configuration options for sponsoreds images'),
-		'page callback' => 'config_admin_sponsored',
+		'page callback' => 'admin_config_sponsored',
 		'access callback' => 'user_access', 
 		'access arguments' => array('administer site configuration'),
 	);
-
 	return $items;
 }
+
