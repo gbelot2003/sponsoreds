@@ -1,2 +1,2 @@
-*Sponsoreds Module
+**Sponsoreds Module
 Drupal 7

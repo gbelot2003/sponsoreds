@@ -1,0 +1,37 @@
+<?php 
+
+/**
+ * @file 
+ * Module Sponsoreds for list and managing images
+ */
+
+
+/**
+ * Implement hook perms
+ */
+
+function sponsoreds_permission(){
+	return array(
+		'using sponsoreds module' => array(
+			'title' => t('Managing Sponsored'),
+			'description' => t('Perform Administration task for sponsoreds module'),
+		),
+	);
+}
+
+/**
+ * Implements hook_menu
+ */
+
+function sponsoreds_menu(){
+	$items = array();
+	$items['config/administration/sponsoreds'] = array(
+		'title' => t('Sponsored Managing'),
+		'description' => t('Configuration options for sponsoreds images'),
+		'page callback' => 'config_admin_sponsored',
+		'access callback' => 'user_access', 
+		'access arguments' => array('administer site configuration'),
+	);
+
+	return $items;
+}
